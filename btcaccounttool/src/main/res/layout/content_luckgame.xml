@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.Luckyfish"
+    tools:showIn="@layout/activity_luckgame">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/luck_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_ll_bg"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/luck_search_et"
+            style="@style/TextView16_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="Put publisher address,published block hash,playersNum,Current publisher TAR"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+        <Button
+            android:id="@+id/confirm_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="confirm"
+            android:textSize="@dimen/dp_10"
+            />
+
+        <ImageView
+            android:id="@+id/luck_scan_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_click_gray_bg"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/qr"/>
+
+    </LinearLayout>
+<TextView
+    android:id="@+id/publisherInfo_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/luck_search_ll_private"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_ll_bg"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/luck_search_et_private"
+            style="@style/TextView16_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="Put private key"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/luck_scan_iv_private"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_click_gray_bg"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/qr"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/numberleft_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="当前参与人数：null,剩余名额:null" />
+
+        <ScrollView
+            android:id="@+id/joiningRealtime_scv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="people joining realtime" />
+
+        </ScrollView>
+        <Button
+            android:id="@+id/join_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="join"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
